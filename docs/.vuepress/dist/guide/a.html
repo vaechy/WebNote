@@ -1,0 +1,110 @@
+<!DOCTYPE html>
+<html lang="en-US">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width,initial-scale=1">
+    <title>编译第一个ts程序 | Hello VuePress</title>
+    <meta name="generator" content="VuePress 1.8.0">
+    
+    <meta name="description" content="Just playing around">
+    
+    <link rel="preload" href="./assets/css/0.styles.b8e6e014.css" as="style"><link rel="preload" href="./assets/js/app.6f9ae4c6.js" as="script"><link rel="preload" href="./assets/js/2.a670786e.js" as="script"><link rel="preload" href="./assets/js/8.91bb7bf6.js" as="script"><link rel="prefetch" href="./assets/js/10.7cd6efc6.js"><link rel="prefetch" href="./assets/js/11.8a5063ae.js"><link rel="prefetch" href="./assets/js/12.01880e0e.js"><link rel="prefetch" href="./assets/js/13.9904e03a.js"><link rel="prefetch" href="./assets/js/14.fde2de13.js"><link rel="prefetch" href="./assets/js/15.40cd5ac0.js"><link rel="prefetch" href="./assets/js/16.7a2e6c27.js"><link rel="prefetch" href="./assets/js/17.5d24f958.js"><link rel="prefetch" href="./assets/js/3.28f8f17c.js"><link rel="prefetch" href="./assets/js/4.865692a8.js"><link rel="prefetch" href="./assets/js/5.81254301.js"><link rel="prefetch" href="./assets/js/6.6e8c67be.js"><link rel="prefetch" href="./assets/js/7.fec0ecd5.js"><link rel="prefetch" href="./assets/js/9.b0019ced.js">
+    <link rel="stylesheet" href="./assets/css/0.styles.b8e6e014.css">
+  </head>
+  <body>
+    <div id="app" data-server-rendered="true"><div class="theme-container"><header class="navbar"><div class="sidebar-button"><svg xmlns="http://www.w3.org/2000/svg" aria-hidden="true" role="img" viewBox="0 0 448 512" class="icon"><path fill="currentColor" d="M436 124H12c-6.627 0-12-5.373-12-12V80c0-6.627 5.373-12 12-12h424c6.627 0 12 5.373 12 12v32c0 6.627-5.373 12-12 12zm0 160H12c-6.627 0-12-5.373-12-12v-32c0-6.627 5.373-12 12-12h424c6.627 0 12 5.373 12 12v32c0 6.627-5.373 12-12 12zm0 160H12c-6.627 0-12-5.373-12-12v-32c0-6.627 5.373-12 12-12h424c6.627 0 12 5.373 12 12v32c0 6.627-5.373 12-12 12z"></path></svg></div> <a href="/./" class="home-link router-link-active"><!----> <span class="site-name">Hello VuePress</span></a> <div class="links"><div class="search-box"><input aria-label="Search" autocomplete="off" spellcheck="false" value=""> <!----></div> <nav class="nav-links can-hide"><div class="nav-item"><a href="/./guide/a/" class="nav-link">
+  Typescript
+</a></div><div class="nav-item"><a href="/./guide/a/" class="nav-link">
+  Node
+</a></div><div class="nav-item"><a href="https://www.vuepress.cn/config/" target="_blank" rel="noopener noreferrer" class="nav-link external">
+  配置
+  <span><svg xmlns="http://www.w3.org/2000/svg" aria-hidden="true" focusable="false" x="0px" y="0px" viewBox="0 0 100 100" width="15" height="15" class="icon outbound"><path fill="currentColor" d="M18.8,85.1h56l0,0c2.2,0,4-1.8,4-4v-32h-8v28h-48v-48h28v-8h-32l0,0c-2.2,0-4,1.8-4,4v56C14.8,83.3,16.6,85.1,18.8,85.1z"></path> <polygon fill="currentColor" points="45.7,48.7 51.3,54.3 77.2,28.5 77.2,37.2 85.2,37.2 85.2,14.9 62.8,14.9 62.8,22.9 71.5,22.9"></polygon></svg> <span class="sr-only">(opens new window)</span></span></a></div> <!----></nav></div></header> <div class="sidebar-mask"></div> <aside class="sidebar"><nav class="nav-links"><div class="nav-item"><a href="/./guide/a/" class="nav-link">
+  Typescript
+</a></div><div class="nav-item"><a href="/./guide/a/" class="nav-link">
+  Node
+</a></div><div class="nav-item"><a href="https://www.vuepress.cn/config/" target="_blank" rel="noopener noreferrer" class="nav-link external">
+  配置
+  <span><svg xmlns="http://www.w3.org/2000/svg" aria-hidden="true" focusable="false" x="0px" y="0px" viewBox="0 0 100 100" width="15" height="15" class="icon outbound"><path fill="currentColor" d="M18.8,85.1h56l0,0c2.2,0,4-1.8,4-4v-32h-8v28h-48v-48h28v-8h-32l0,0c-2.2,0-4,1.8-4,4v56C14.8,83.3,16.6,85.1,18.8,85.1z"></path> <polygon fill="currentColor" points="45.7,48.7 51.3,54.3 77.2,28.5 77.2,37.2 85.2,37.2 85.2,14.9 62.8,14.9 62.8,22.9 71.5,22.9"></polygon></svg> <span class="sr-only">(opens new window)</span></span></a></div> <!----></nav>  <ul class="sidebar-links"><li><section class="sidebar-group depth-0"><p class="sidebar-heading open"><span>基础</span> <!----></p> <ul class="sidebar-links sidebar-group-items"><li><a href="/./guide/a.html" aria-current="page" class="active sidebar-link">编译第一个ts程序</a><ul class="sidebar-sub-headers"><li class="sidebar-sub-header"><a href="/./guide/a.html#安装typescript" class="sidebar-link">安装TypeScript</a></li><li class="sidebar-sub-header"><a href="/./guide/a.html#用-tsc-编译" class="sidebar-link">用 TSC 编译</a></li><li class="sidebar-sub-header"><a href="/./guide/a.html#配建构建工具-webpack" class="sidebar-link">配建构建工具 webpack</a></li><li class="sidebar-sub-header"><a href="/./guide/a.html#修改npm的脚本" class="sidebar-link">修改npm的脚本</a></li></ul></li><li><a href="/./guide/b.html" class="sidebar-link">数据类型</a></li><li><a href="/./guide/c.html" class="sidebar-link">枚举类型</a></li><li><a href="/./guide/d.html" class="sidebar-link">接口</a></li><li><a href="/./guide/e.html" class="sidebar-link">类</a></li><li><a href="/./guide/f.html" class="sidebar-link">泛型</a></li><li><a href="/./guide/g.html" class="sidebar-link">函数相关知识点梳理</a></li><li><a href="/./guide/h.html" class="sidebar-link">类和接口的关系</a></li><li><a href="/./guide/i.html" class="sidebar-link">类型检查机制</a></li><li><a href="/./guide/j.html" class="sidebar-link">高级类型</a></li></ul></section></li><li><section class="sidebar-group depth-0"><p class="sidebar-heading"><span>进阶</span> <!----></p> <!----></section></li><li><section class="sidebar-group depth-0"><p class="sidebar-heading"><span>工程</span> <!----></p> <!----></section></li></ul> </aside> <main class="page"> <div class="theme-default-content content__default"><h1 id="编译第一个ts程序"><a href="#编译第一个ts程序" class="header-anchor">#</a> 编译第一个ts程序</h1> <h2 id="安装typescript"><a href="#安装typescript" class="header-anchor">#</a> 安装TypeScript</h2> <p>使用 npm 全局安装 TypeScript，这样就可以在任何地方使用其编译器 TSC</p> <div class="language-shell extra-class"><pre class="language-shell"><code><span class="token function">npm</span> i -g typescript
+</code></pre></div><p>安装完成后，新建目录 <code>ts_in_action</code>，用 npm 初始化</p> <div class="language-shell extra-class"><pre class="language-shell"><code><span class="token function">mkdir</span> ts_in_action
+<span class="token builtin class-name">cd</span> ts_in_action
+<span class="token comment"># -y 表示用 yes 回答初始化过程中的所有终端提问</span>
+<span class="token function">npm</span> init -y
+</code></pre></div><h2 id="用-tsc-编译"><a href="#用-tsc-编译" class="header-anchor">#</a> 用 TSC 编译</h2> <p>安装好后就可以在命令行中使用 TSC 编译器，查看编译器的相关配置</p> <div class="language-shell extra-class"><pre class="language-shell"><code>tsc -h
+</code></pre></div><p>创建配置文件 <code>tsconfig.json</code></p> <div class="language-shell extra-class"><pre class="language-shell"><code>tsc --init
+<span class="token operator">==</span><span class="token operator">==</span><span class="token operator">==</span><span class="token operator">==</span><span class="token operator">==</span>
+message TS6071: Successfully created a tsconfig.json file.
+</code></pre></div><p>创建文件结构如下</p> <div class="language- extra-class"><pre class="language-text"><code>package.json
+tsconfig.json
+src/
+	|-index.ts
+</code></pre></div><p>在index.ts 文件内编写一个段代码：</p> <div class="language-typescript extra-class"><pre class="language-typescript"><code><span class="token keyword">let</span> hello<span class="token operator">:</span><span class="token builtin">string</span> <span class="token operator">=</span> <span class="token string">&quot;Hello TypeScript&quot;</span>
+</code></pre></div><p>然后在终端对这个文件进行编译：</p> <div class="language-shell extra-class"><pre class="language-shell"><code>tsc ./src/index.ts
+</code></pre></div><p>编译完成后，发现 src 目录下新生成了一个文件 <code>index.js</code>，内容是：</p> <div class="language-javascript extra-class"><pre class="language-javascript"><code><span class="token keyword">var</span> hello <span class="token operator">=</span> <span class="token string">&quot;Hello TypeScript&quot;</span><span class="token punctuation">;</span>
+</code></pre></div><p>tsc 把ES6新语法 let 编译为 var ， 并且去掉了 TypeScript 的类型注解<code>:string</code>。</p> <h2 id="配建构建工具-webpack"><a href="#配建构建工具-webpack" class="header-anchor">#</a> 配建构建工具 webpack</h2> <p>安装三个包</p> <div class="language-shell extra-class"><pre class="language-shell"><code><span class="token function">npm</span> i webpack webpack-cli webpack-dev-server -D
+</code></pre></div><p>为了增加可维护性，我们可以把工程开发环境、生产环境、公共环境分开的配置分开书写，最后通过插件合并。在配置 webpack 时，我们也遵循这个思路。同时在 src 目录下添加一个模板目录 tpl，用于存放首页模板。得到构建目录如下：</p> <div class="language-shell extra-class"><pre class="language-shell"><code>build/
+	<span class="token operator">|</span>-webpack.config.js			<span class="token comment"># 所有配置文件的入口</span>
+	<span class="token operator">|</span>-webpack.base.config.js	<span class="token comment"># 公共环境的配置</span>
+	<span class="token operator">|</span>-webpack.dev.config.js		<span class="token comment"># 开发环境的配置</span>
+	<span class="token operator">|</span>-webpack.pro.config.js		<span class="token comment"># 生产环境的配置</span>
+src/
+	<span class="token operator">|</span>-tpl/
+		<span class="token operator">|</span>-index.html
+</code></pre></div><p>再安装 webpack 中用到的加载器和插件</p> <div class="language-shell extra-class"><pre class="language-shell"><code><span class="token comment"># 安装加载器和编译器</span>
+<span class="token function">npm</span> i -D typescript ts-loader 	
+<span class="token comment"># 安装各环境所需插件</span>
+<span class="token function">npm</span> i -D html-webpack-plugin clean-webpack-plugin webpack-merge
+</code></pre></div><ul><li><p><code>ts-loader</code>：用于加载 ts 文件。</p></li> <li><p><code>typescript</code>：用于把 ts 文件编译成 js 文件。</p></li> <li><p><code>html-webpack-plugin</code>：通过一个模板帮助生成网站首页，并自动把 webpack 的输出文件嵌入到首页中。</p></li> <li><p><code>CleanWebpackPlugin</code> ：因为有的时候为了避免缓存，我们网站需要在文件后加入hash，这样在多次构建后会产生很多无用的文件。这个插件可以帮助我们在每次成功构建后清空dist目录。</p></li> <li><p><code>webpack-merge</code>：用于合并配置文件。</p></li></ul> <p>至此，webpack配置工作完成。</p> <h2 id="修改npm的脚本"><a href="#修改npm的脚本" class="header-anchor">#</a> 修改npm的脚本</h2> <ul><li>在 package.json 中修改入口文件</li></ul> <div class="language-json extra-class"><pre class="language-json"><code> <span class="token punctuation">{</span><span class="token property">&quot;main&quot;</span><span class="token operator">:</span> <span class="token string">&quot;./src/index.ts&quot;</span><span class="token punctuation">}</span>
+</code></pre></div><ul><li>添加开发环境启动脚本</li></ul> <p>使用 <code>webpack-dev-server</code>启动本地服务器，通过<code>--mode</code>传入环境参数，最后用<code>--config</code>指定配置文件。</p> <div class="language-json extra-class"><pre class="language-json"><code><span class="token punctuation">{</span> 
+ <span class="token property">&quot;scripts&quot;</span><span class="token operator">:</span><span class="token punctuation">{</span>
+     <span class="token property">&quot;start&quot;</span><span class="token operator">:</span><span class="token string">&quot;webpack-dev-server --mode=development --config ./build/webpack.config.js&quot;</span>
+ <span class="token punctuation">}</span>
+<span class="token punctuation">}</span>
+</code></pre></div><p>终端启动开发环境构建：</p> <div class="language-shell extra-class"><pre class="language-shell"><code><span class="token function">npm</span> run start
+<span class="token operator">==</span><span class="token operator">==</span><span class="token operator">==</span><span class="token operator">==</span><span class="token operator">==</span><span class="token operator">==</span><span class="token operator">=</span>
+i ｢wds｣: Project is running at http://localhost:8080/
+<span class="token punctuation">..</span>.
+Built at: <span class="token number">2020</span>-02-11 <span class="token number">14</span>:28:33
+     Asset       Size  Chunks             Chunk Names
+    app.js    <span class="token number">361</span> KiB    main  <span class="token punctuation">[</span>emitted<span class="token punctuation">]</span>  main
+index.html  <span class="token number">317</span> bytes          <span class="token punctuation">[</span>emitted<span class="token punctuation">]</span>
+Entrypoint main <span class="token operator">=</span> app.js
+<span class="token punctuation">..</span>.
+i ｢wdm｣: Compiled successfully.
+
+</code></pre></div><p>可以看到<code>webpack-dev-server</code>为我们启动了一个跑在8080端口的本地服务器。再次修改 index.ts 文件，然它在页面中显示一段文本：</p> <div class="language-javascript extra-class"><pre class="language-javascript"><code><span class="token keyword">let</span> hello<span class="token operator">:</span> string <span class="token operator">=</span> <span class="token string">&quot;Hello TypeScript&quot;</span><span class="token punctuation">;</span>
+document<span class="token punctuation">.</span><span class="token function">querySelectorAll</span><span class="token punctuation">(</span><span class="token string">&quot;.app&quot;</span><span class="token punctuation">)</span><span class="token punctuation">[</span><span class="token number">0</span><span class="token punctuation">]</span><span class="token punctuation">.</span>innerHTML <span class="token operator">=</span> hello<span class="token punctuation">;</span>
+</code></pre></div><p>每次更新，server 都会自动帮助我们重构代码，并刷新页面。需要注意的是，webpack 的输出文件 app.js 和模板插件生成的 index.html 都存放在内存中，需要用浏览器才能查看。</p> <ul><li>添加生产环境脚本</li></ul> <p>生产环境需要用到 webpack ，同样通过 <code>--mode</code> 传入环境参数，并用 <code>--config</code> 指定配置文件</p> <div class="language-json extra-class"><pre class="language-json"><code><span class="token punctuation">{</span> 
+ <span class="token property">&quot;scripts&quot;</span><span class="token operator">:</span><span class="token punctuation">{</span>
+     <span class="token property">&quot;build&quot;</span><span class="token operator">:</span><span class="token string">&quot;webpack --mode=production --config ./build/webpack.config.js&quot;</span>
+ <span class="token punctuation">}</span>
+<span class="token punctuation">}</span>
+</code></pre></div><p>终端启动生产环境构建</p> <div class="language-shell extra-class"><pre class="language-shell"><code><span class="token function">npm</span> run build
+<span class="token operator">==</span><span class="token operator">==</span><span class="token operator">==</span><span class="token operator">==</span><span class="token operator">==</span><span class="token operator">==</span><span class="token operator">=</span>
+Hash: 4ccf59b5b928f628cd4b
+Version: webpack <span class="token number">4.41</span>.5
+Time: 5698ms
+Built at: <span class="token number">2020</span>-02-11 <span class="token number">15</span>:01:12
+     Asset        Size  Chunks             Chunk Names
+    app.js  <span class="token number">1010</span> bytes       <span class="token number">0</span>  <span class="token punctuation">[</span>emitted<span class="token punctuation">]</span>  main
+index.html   <span class="token number">317</span> bytes          <span class="token punctuation">[</span>emitted<span class="token punctuation">]</span>
+Entrypoint main <span class="token operator">=</span> app.js
+<span class="token punctuation">[</span><span class="token number">0</span><span class="token punctuation">]</span> ./src/index.ts <span class="token number">105</span> bytes <span class="token punctuation">{</span><span class="token number">0</span><span class="token punctuation">}</span> <span class="token punctuation">[</span>built<span class="token punctuation">]</span>
+Child html-webpack-plugin <span class="token keyword">for</span> <span class="token string">&quot;index.html&quot;</span><span class="token builtin class-name">:</span>
+     <span class="token number">1</span> asset
+    Entrypoint undefined <span class="token operator">=</span> index.html
+    <span class="token punctuation">[</span><span class="token number">0</span><span class="token punctuation">]</span> ./node_modules/html-webpack-plugin/lib/loader.js<span class="token operator">!</span>./src/tpl/index.html <span class="token number">483</span> bytes 
+<span class="token punctuation">{</span><span class="token number">0</span><span class="token punctuation">}</span> <span class="token punctuation">[</span>built<span class="token punctuation">]</span>
+    <span class="token punctuation">[</span><span class="token number">2</span><span class="token punctuation">]</span> <span class="token punctuation">(</span>webpack<span class="token punctuation">)</span>/buildin/global.js <span class="token number">472</span> bytes <span class="token punctuation">{</span><span class="token number">0</span><span class="token punctuation">}</span> <span class="token punctuation">[</span>built<span class="token punctuation">]</span>
+    <span class="token punctuation">[</span><span class="token number">3</span><span class="token punctuation">]</span> <span class="token punctuation">(</span>webpack<span class="token punctuation">)</span>/buildin/module.js <span class="token number">497</span> bytes <span class="token punctuation">{</span><span class="token number">0</span><span class="token punctuation">}</span> <span class="token punctuation">[</span>built<span class="token punctuation">]</span>
+        + <span class="token number">1</span> hidden module
+</code></pre></div><p>构建完成后，可以看到新生成了一个 dist 目录结构如下：</p> <div class="language- extra-class"><pre class="language-text"><code>dist/
+	|-app.js
+	|-index.html
+</code></pre></div><p>app.js 是 webpack 压缩好的输出文件，并且已经自动嵌入到 index.html中。</p></div> <footer class="page-edit"><!----> <!----></footer> <div class="page-nav"><p class="inner"><!----> <span class="next"><a href="/./guide/b.html">
+        数据类型
+      </a>
+      →
+    </span></p></div> </main></div><div class="global-ui"></div></div>
+    <script src="./assets/js/app.6f9ae4c6.js" defer></script><script src="./assets/js/2.a670786e.js" defer></script><script src="./assets/js/8.91bb7bf6.js" defer></script>
+  </body>
+</html>
